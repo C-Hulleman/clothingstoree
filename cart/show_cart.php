@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
 <div class="container">
@@ -12,7 +12,7 @@
     <ul>
         <?php
         session_start();
-        include 'config.php'; // Include your database configuration file
+        include '../config/config.php'; // Include your database configuration file
 
         // Initialize total price
         $totalPrice = 0;
@@ -60,7 +60,7 @@
     <!-- Display the total price -->
     <p>Total Price: $<?php echo number_format($totalPrice, 2); ?></p>
 
-    <a href="index.php">Back to Shopping</a>
+    <a href="../index/index.php">Back to Shopping</a>
 </div>
 </body>
 </html>

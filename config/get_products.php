@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             // Redirect back to admin.php
-            header("Location: admin.php");
+            header("Location: ../admin/admin.php");
             exit(); // Make sure to exit to prevent further execution
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
