@@ -1,4 +1,3 @@
-const adminButton = document.querySelector('.admin-button');
 
 document.addEventListener('mousemove', (e) => {
     // Check if the mouse is in the top-right corner
@@ -63,30 +62,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-    // Function to check if the mouse is within 5 centimeters of the admin button
-    function isMouseNearAdminButton(event) {
-        const adminButton = document.getElementById("admin-button");
-        const rect = adminButton.getBoundingClientRect();
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
-
-        // Calculate the distance between the mouse pointer and the admin button
-        const distance = Math.sqrt(
-            Math.pow(mouseX - (rect.left + rect.width / 2), 2) +
-            Math.pow(mouseY - (rect.top + rect.height / 2), 2)
-        );
-
-        // Adjust this value (50) as needed to define the proximity threshold
-        return distance <= 50;
-    }
-
-    // Event listener to toggle the visibility of the admin button
-    document.body.addEventListener("mousemove", function (event) {
-        const adminButton = document.getElementById("admin-button");
-
-        if (isMouseNearAdminButton(event)) {
-            adminButton.style.display = "inline-block";
-        } else {
-            adminButton.style.display = "none";
-        }
-    });

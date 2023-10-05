@@ -15,6 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Redirect back to the shopping cart
-header("Location: show_cart.php");
+header("Location: ../cart/show_cart.php");
 exit(); // Ensure that no code is executed after the header redirect
 ?>

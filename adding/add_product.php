@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
@@ -7,12 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
 
     // File upload handling
-    $targetDir = "products/";
-    $targetFile = $targetDir . basename($_FILES["image"]["name"]);
+    $targetDir = "../products";  // Use forward slashes and correct path
+    $targetFile = $targetDir . '/' . basename($_FILES["image"]["name"]); // Use forward slash
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
+
     // Check if the file is an actual image
-    $check = getimagesize($_FILES["image"]["tmp_name"]);
+    $check = getimagesize($_FILES["image"]["tmp_name"]);    
     if ($check === false) {
         die("Error: File is not an image.");
     }
@@ -48,6 +49,6 @@ $conn->close();
 <script>
     // Redirect to the admin page after 5 seconds
     setTimeout(function() {
-        window.location.href = "admin_panel.php";
+        window.location.href = "../admin/admin_panel.php";
     }, 5000); // 5000 milliseconds (5 seconds)
 </script>

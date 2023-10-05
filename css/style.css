@@ -1,0 +1,197 @@
+/* Combined CSS for all pages */
+
+/* Common styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styling voor Login, Register, View Cart en Request Product-links */
+.login-link,
+.register-link,
+.cart-link,
+.request-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 5px    ;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #333;
+}
+
+.cart-link,
+.request-link {
+    background-color: #4caf50;
+}
+
+.request-link {
+    background-color: #2196F3;
+}
+
+
+/* Products List styles */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: 30%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.product button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+.delete-product {
+    background-color: #ff0000;
+}
+
+/* Cart styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+li img {
+    max-width: 100%;
+    height: auto;
+}
+
+.total-price {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Request Product form styles */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+form button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Stijlregels voor de Admin-knop */
+.admin-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600; /* Oranje achtergrondkleur */
+    color: #fff; /* Witte tekstkleur */
+    text-decoration: none; /* Verwijder onderstreping van de tekstlink */
+    border: none; /* Verwijder randen */
+    border-radius: 5px; /* Ronde hoeken */
+    font-size: 16px;
+    margin-left: 10px; /* Wat afstand tussen de knoppen en andere links */
+}
+
+.admin-button:hover {
+    background-color: #ff3300; /* Verander de achtergrondkleur op hover */
+}

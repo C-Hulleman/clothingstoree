@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config.php';
+include '../config/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -26,18 +26,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $hashedPassword)) {
             // Successful login
             $_SESSION['admin'] = true;
-            header("Location: admin_panel.php");
+            header("Location: ../admin/admin_panel.php");
             exit();
         } else {
             // Invalid password
-            header("Location: admin.php?error=1");
+            header("Location: ../admin/admin.php?error=1");
             exit();
         }
         
     }
 
     // Invalid credentials
-    header("Location: admin.php?error=1"); // Redirect back to login with an error flag
+    header("Location: ../admin/admin.php?error=1"); // Redirect back to login with an error flag
     exit();
 }
 

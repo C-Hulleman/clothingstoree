@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 02 okt 2023 om 10:59
+-- Gegenereerd op: 03 okt 2023 om 14:12
 -- Serverversie: 10.4.28-MariaDB
 -- PHP-versie: 8.0.28
 
@@ -39,7 +39,7 @@ CREATE TABLE `admin_credentials` (
 
 INSERT INTO `admin_credentials` (`id`, `username`, `password`) VALUES
 (1, 'pareltje1972', '$2y$10$eFuT9nX/m7/WxAC8ISTJLumlg07eWqo04.BA6o7YTTibshuPrpPNy');
--- wachtwoord is: hierdoenwenietaan1972
+
 -- --------------------------------------------------------
 
 --
@@ -61,8 +61,19 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `image_url`) VALUES
 (1, 'Gucci/TheNorthFace', 'Gucci/TheNorthFace shirt limited edition', 4599, 'products/clothing2.png'),
 (3, 'Gucci', 'gucci shirt black long sleeve', 1200, 'products/clothing1.png'),
-(4, 'nike', 'nike shirt man and women black short \nsleeve', 50, 'products/clothing3.png'),
-(5, 'kaas', 'het is oude kaas', 1299, 'products/rood mama.jpg');
+(4, 'nike', 'nike shirt man and women black short \nsleeve', 50, 'products/clothing3.png');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -81,6 +92,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexen voor tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
@@ -95,6 +112,12 @@ ALTER TABLE `admin_credentials`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT voor een tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

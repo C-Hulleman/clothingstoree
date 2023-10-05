@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config/config.php';
 
 // Insert a sample admin account with hashed password
 $hashedPassword = password_hash('hierdoenwenietaan1972', PASSWORD_DEFAULT);
